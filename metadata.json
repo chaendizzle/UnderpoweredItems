@@ -1,0 +1,9 @@
+{
+    "name": "Evans Mod",
+    "description": "Why are you playing this mod.",
+    "internalname": "Evansmod",
+    "version": "0",
+    "author": "Evans",
+    "mpcompat": true,
+	"dependencies": []
+}
