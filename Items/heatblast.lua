@@ -61,9 +61,9 @@ registercallback("onPlayerStep", function(player)
         if player:get("heatblastCharge") == nil then
             player:set("heatblastCharge", 0)
         end
-        -- base 100% charge speed + 30% per item
-        local baseChargeSpeed = 0.75
-        local scalingChargeSpeed = 0.25
+        -- base 100% charge speed (1 item) + 50% per item
+        local baseChargeSpeed = 0.5
+        local scalingChargeSpeed = 0.5
         local playerZ = player:getAlarm(2) == -1 and player:get("z_skill") == 1
         local playerX = player:getAlarm(3) == -1 and player:get("x_skill") == 1
         local playerC = player:getAlarm(4) == -1 and player:get("c_skill") == 1
