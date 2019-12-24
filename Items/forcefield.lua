@@ -55,13 +55,25 @@ forcefield:addCallback("use", function(player, embryo)
     ff:getAccessor().stun = 2
     ff:getAccessor().knockback = 20
     ff:getAccessor().slow_on_hit = 10
+    if embryo then
+        ff:getAccessor().stun = 4
+        ff:getAccessor().knockback = 28
+        ff:getAccessor().slow_on_hit = 20
+    end
     if net.online then
         if net.host then
             local forcefieldInst = forcefieldObj:create(player.x, player.y)
             SyncForceField:sendAsHost(net.ALL, nil, forcefieldInst.x, forcefieldInst.y)
+            if embryo then
+                local forcefieldInst = forcefieldObj:create(player.x, player.y)
+                SyncForceField:sendAsHost(net.ALL, nil, forcefieldInst.x, forcefieldInst.y)
+            end
         end
     else
         local forcefieldInst = forcefieldObj:create(player.x, player.y)
+        if embryo then
+            local forcefieldInst = forcefieldObj:create(player.x, player.y)
+        end
     end
     sounds.shield:play(1, 3)
 end)
