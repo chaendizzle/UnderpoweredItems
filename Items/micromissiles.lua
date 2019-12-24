@@ -38,10 +38,10 @@ registercallback("onPlayerStep", function(player)
             player:set("micromissilesCharge", 0)
             player:set("micromissilesQueued", 0)
         end
-        -- base 360 charge time (1 item), -30 per item down to 30
+        -- base 360 charge time (1 item), -30 per item down to 120
         local baseChargeTime = 390
         local scalingChargeTime = 30
-        local chargeTime = math.max(30, baseChargeTime - player:countItem(micromissiles) * scalingChargeTime)
+        local chargeTime = math.max(120, baseChargeTime - player:countItem(micromissiles) * scalingChargeTime)
         -- if player is able to use skills and is using one
         local playerZ = player:getAlarm(2) == -1 and player:get("z_skill") == 1
         local playerX = player:getAlarm(3) == -1 and player:get("x_skill") == 1
@@ -68,7 +68,7 @@ registercallback("onPlayerStep", function(player)
             player:set("micromissilesQueued", player:get("micromissilesQueued") - 1)
             -- base 100% damage (item), +10% per item
             local baseMissileDamage = 1.0
-            local scalingMissileDamage = 0.1
+            local scalingMissileDamage = 0.5
             local missileDamage = player:get("damage") * (baseMissileDamage + player:countItem(micromissiles) * scalingMissileDamage)
             if net.online then
                 if net.host then

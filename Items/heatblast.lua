@@ -15,7 +15,7 @@ end
 
 heatblast:setLog{
     group = "uncommon",
-    description = "Attacks fill up a charge bar. When the bar fills, it creates a heat blast which damages and stuns nearby enemies.",
+    description = "Attacks fill up a charge bar. When the bar fills, it creates a heat blast which damages nearby enemies.",
     story = "Anything can be a ***** if you're brave enough.",
     destination = "Argent Tower,\nArgent Facility,\nMars",
     date = "06/09/2069"
