@@ -1,7 +1,7 @@
 {
-    "name": "Evans Mod",
-    "description": "Why are you playing this mod.",
-    "internalname": "Evansmod",
+    "name": "Underpowered Items",
+    "description": "Adds an assortment of weaker items to the game.",
+    "internalname": "underpowered_items",
     "version": "0",
     "author": "Evans",
     "mpcompat": true,

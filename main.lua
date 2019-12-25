@@ -13,5 +13,6 @@ require("Items.heatblast")
 require("Items.shredder")
 require("Items.micromissiles")
 require("Items.forcefield")
+require("Items.anvil")
 
 --Artifacts
