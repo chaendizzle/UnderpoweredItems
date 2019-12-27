@@ -14,5 +14,6 @@ require("Items.shredder")
 require("Items.micromissiles")
 require("Items.forcefield")
 require("Items.anvil")
+require("Items.elephant")
 
 --Artifacts

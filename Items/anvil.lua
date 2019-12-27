@@ -11,7 +11,7 @@ anvil.useCooldown = 8
 
 if modloader.checkFlag("EVANS_DEBUG_ENABLE") or true then
     registercallback("onPlayerInit", function(player)
-        player.useItem = anvil
+        -- player.useItem = anvil
     end)
 end
 
